@@ -1,0 +1,11 @@
+services:
+  app:
+    volumes:
+      - log:/app/log
+    env_file:
+      - .env
+    restart: unless-stopped
+
+volumes:
+  log:
+    name: app-log-vol
